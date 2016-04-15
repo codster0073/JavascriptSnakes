@@ -16,9 +16,27 @@
 		right: 0;
 		left: 0;
 	}
+	h1 {
+		text-align: center;
+		margin: auto;
+	}
+	img {
+		float: left;
+	}
+	.jaden {
+		float: right;
+	}
+	.jaden img {
+		float: right;
+	}
 	</style>
 </head>
 <body>
+	<h1>Snakes</h1>
+	<img src="snakes.jpg" height="250px" width="400px" alt="snake" />
+	<div class="jaden">
+		<img src="jaden.jpg" alt="jaden" height="400px" width="400px" />
+	</div>
 <script>
 var
 /**
@@ -161,7 +179,6 @@ function main() {
 	// create and initiate the canvas element
 	canvas = document.createElement("canvas");
 	highCtx = canvas.getContext("2d");
-	highCtx.font = "24pt Helvetica"
 	canvas.width = COLS*20;
 	canvas.height = ROWS*20;
 	ctx = canvas.getContext("2d");
@@ -169,6 +186,7 @@ function main() {
 	document.body.appendChild(canvas);
 	// sets an base font for bigger score display
 	ctx.font = "12px Helvetica";
+	highCtx.font = "20pt Helvetica";
 	frames = 0;
 	keystate = {};
 	// keeps track of the keybourd input
@@ -297,6 +315,7 @@ function draw() {
 	// message to the canvas
 	ctx.fillStyle = "#000";
 	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
+
 	var highscore = localStorage.getItem("highscore");
 if(highscore !== null){
    if (score > highscore) {
@@ -304,8 +323,9 @@ if(highscore !== null){
       }
 }else{
       localStorage.setItem("highscore", score );
-}
-	highCtx.fillText("HIGHSCORE: " + highscore, 420, canvas.height-490);
+	}
+	highCtx.fillStyle = "#000";
+	highCtx.fillText("HIGHSCORE: " + highscore, 300, canvas.height-490);
 }
 // start and run the game
 main();
