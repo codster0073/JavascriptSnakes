@@ -29,6 +29,17 @@
 	.jaden img {
 		float: right;
 	}
+	.description p {
+		text-align: left;
+		margin-top: 250px;
+		font-size: 40px;
+	}
+	.jadenDescription p {
+		text-align: right;
+		margin-top: 80px;
+		margin-right: 10px;
+		font-size: 24px;
+	}
 	</style>
 </head>
 <body>
@@ -42,15 +53,20 @@ var
 /**
  * Constats
  */
+ //sets the width and height of the grid
 COLS = 26,
+//26 is the default value
 ROWS = 26,
+//distinguishes the different groups by colors
 EMPTY = 0,
 SNAKE = 1,
 FRUIT = 2,
+//allows for functions to be set up by knowing what direction the snake is moving in
 LEFT  = 0,
 UP    = 1,
 RIGHT = 2,
 DOWN  = 3,
+//sets up key codes for the game
 KEY_LEFT  = 37,
 KEY_UP    = 38,
 KEY_RIGHT = 39,
@@ -330,5 +346,23 @@ if(highscore !== null){
 // start and run the game
 main();
 </script>
+<div class="description">
+	<p>
+		Hope you enjoy this
+		<br>
+		game of Snakes ;)
+	</p>
+</div>
+<div class="jadenDescription">
+	<p>
+		Pictured below is Jaydun Walthers
+		<br>
+		age: 17
+		<br>
+		Current occupation: Walmart
+		<br>
+		Hobbies: Playing fetch with his dogs
+	</p>
+</div>
 </body>
 </html>
